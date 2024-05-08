@@ -22,7 +22,12 @@ public class Song {
     @ManyToOne
     private Singer singer;
 
-    
+    public Song(String name, String duracion, String description, Singer singer) {
+        this.name = name;
+        this.duracion = duracion;
+        this.description = description;
+        this.singer = singer;
+    }
 
     public Song() {
     }
@@ -57,6 +62,12 @@ public class Song {
 
     public void setSinger(Singer singer) {
         this.singer = singer;
+    }
+
+    @Override
+    public String toString() {
+        return "Song [id=" + id + ", name=" + name + ", duracion=" + duracion + ", description=" + description
+            ;
     }
 
     
